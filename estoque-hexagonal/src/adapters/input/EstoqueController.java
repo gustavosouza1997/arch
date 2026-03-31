@@ -2,7 +2,7 @@ package presentation;
 
 import application.GerenciadorEstoque;
 import domain.model.Produto;
-import infrastructure.ProdutoRepositorio;
+import domain.ports.output.IProdutoRepositorio;
 
 /*
  * ============================================================
@@ -18,7 +18,7 @@ public class EstoqueController {
     public static void main(String[] args) {
         System.out.println("=== SISTEMA DE ESTOQUE - ARQUITETURA EM CAMADAS ===\n");
 
-        ProdutoRepositorio produtoRepositorio = new ProdutoRepositorio();
+        IProdutoRepositorio produtoRepositorio = new ProdutoRepositorio();
         GerenciadorEstoque gerenciador = new GerenciadorEstoque(produtoRepositorio);
 
         gerenciador.cadastrarProduto("p1", "Teclado Mecânico", 250.00);

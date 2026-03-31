@@ -5,11 +5,11 @@ import java.util.List;
 import domain.model.Estoque;
 import domain.model.Produto;
 import domain.ports.input.IGerenciadorEstoque;
-import infrastructure.ProdutoRepositorio;
+import domain.ports.output.IProdutoRepositorio;
 
 public class GerenciadorEstoque implements IGerenciadorEstoque {
 
-    private ProdutoRepositorio produtoRepositorio;
+    private IProdutoRepositorio produtoRepositorio;
     private Estoque estoque;
 
     public GerenciadorEstoque(ProdutoRepositorio produtoRepositorio) {

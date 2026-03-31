@@ -4,7 +4,6 @@ import java.util.List;
 
 import domain.Estoque;
 import domain.Produto;
-import infrastructure.ProdutoRepositorio;
 
 public interface IGerenciadorEstoque {
 
